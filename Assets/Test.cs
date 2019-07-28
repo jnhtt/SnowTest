@@ -27,7 +27,7 @@ public class Test : MonoBehaviour
 
         var defaultZone = new CustomRenderTextureUpdateZone();
         defaultZone.needSwap = true;
-        defaultZone.passIndex = 0; // 波動方程式のシミュレーションのパス
+        defaultZone.passIndex = 0;
         defaultZone.rotation = 0f;
         defaultZone.updateZoneCenter = new Vector2(0.5f, 0.5f);
         defaultZone.updateZoneSize = new Vector2(1f, 1f);
@@ -40,7 +40,7 @@ public class Test : MonoBehaviour
         p.x = (target.position.x + center.x) * 0.1f * texture.width;
         p.y = (target.position.z + center.z) * 0.1f * texture.height;
         material.SetVector("_WorldPos", p);
-        texture.Update(1);
+        texture.Update(0);
     }
 #endif
 }
